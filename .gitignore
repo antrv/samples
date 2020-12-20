@@ -2,4 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Avalonia-Issue-5194/.vs/AvaloniaApplication1/v16
+**/.vs
+**/obj
+**/bin

@@ -1,0 +1,44 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:AvaloniaApplication1.ViewModels;assembly=AvaloniaApplication1"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaApplication1">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid RowDefinitions="Auto, *">
+
+        <Grid RowDefinitions="Auto, Auto">
+          <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Items[0].Name: " />
+            <TextBox Width="200" Text="{Binding Items[0].Name}" />
+          </StackPanel>
+          <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+              <TextBlock Text="Items[0].AdditionalData[0]: " />
+              <TextBox Width="200" Text="{Binding Items[0].AdditionalData[0]}" />
+          </StackPanel>
+          </Grid>
+
+        <DataGrid Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  AlternatingRowBackground="{x:Null}"
+                  RowBackground="{x:Null}"
+                  ColumnWidth="200"
+                  RowHeight="28"
+                  Items="{Binding Items}">
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+            <DataGridTextColumn Header="Age" Binding="{Binding Age}" />
+            <DataGridTextColumn Header="C0" Binding="{Binding AdditionalData[0]}" />
+            <DataGridTextColumn Header="C1" Binding="{Binding AdditionalData[1]}" />
+          </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
+</Window>

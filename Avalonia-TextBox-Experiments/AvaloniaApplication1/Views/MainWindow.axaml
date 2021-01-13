@@ -1,0 +1,30 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:AvaloniaApplication1.ViewModels;assembly=AvaloniaApplication1"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:AvaloniaApplication1.Controls"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaApplication1">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <StackPanel Orientation="Vertical" Margin="10">
+        <TextBox x:Name="TextBox"
+                 Text="{Binding Text}" />
+
+        <controls:TextBoxEx Margin="0,10,0,0">
+            <controls:TextBoxEx.InnerLeftContent>
+                <TextBlock Text="$ " />
+            </controls:TextBoxEx.InnerLeftContent>
+            <controls:TextBoxEx.InnerRightContent>
+                <TextBlock Text="$" />
+            </controls:TextBoxEx.InnerRightContent>
+        </controls:TextBoxEx>
+    </StackPanel>
+
+</Window>

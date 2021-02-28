@@ -9,9 +9,9 @@ namespace TestProject1
         [Fact]
         public void Test1()
         {
-            MyEnum[] a = {MyEnum.Item1};
+            MyEnum a = MyEnum.Item1;
 
-            a[0].Should().Be(MyEnum.Item1);
+            a.Should().Be(MyEnum.Item1);
         }
     }
 }

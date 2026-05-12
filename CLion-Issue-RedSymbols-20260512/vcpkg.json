@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "sample",
+  "dependencies": [
+    "boost-asio",
+    "boost-beast"
+  ],
+  "builtin-baseline": "56bb2411609227288b70117ead2c47585ba07713",
+  "$comment": "version 2026.04.27"
+}
